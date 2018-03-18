@@ -26,7 +26,7 @@ public class WelcomeSteps {
 
     @Then("^I see a welcome message \"([^\"]*)\"$")
     public void iSeeAWelcomeMessage(String message) {
-        By byAndroidUIAutomator = new MobileBy.ByAndroidUIAutomator("new UiSelector().textContains(\"Hello World\")");
+        By byAndroidUIAutomator = new MobileBy.ByAndroidUIAutomator("new UiSelector().textContains(\""+message+"\")");
         appiumDriver.findElement(byAndroidUIAutomator);
     }
 
